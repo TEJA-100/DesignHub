@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Hub</title>
+    <link rel="icon" href="logoadd.png" type="image">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <style>
+        .nav-link {
+            font-weight: bold;
+            color: white !important;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #ff5733 !important;
+        }
+
+        .herosection
+        {
+          background: linear-gradient(150deg,#ff6a00 0%,#1c1c1c 20%,#000000 50%,#1c1c1c 80%,#ff6a00 100%);
+          color: white;
+          
+        }
+        .btn-orange {
+      
+        border-color: #ff7a00;
+        color: #fff;
+        transition: background-color 0.3s, border-color 0.3s;
+        }
+
+       .btn-orange:hover {
+        background-color: #e66d00;
+        border-color: #e66d00;
+        color: #fff;
+       }
+
+       .btn-primary:hover
+        {
+          background-color: #004c9d;
+          border-color: #004085;
+          color: #fff;
+          transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .card
+        {
+          background-color: #2c2c2c;
+          color: white;
+          text-align: center;
+          border: none;
+          padding: 20px;
+          transition: transform 0.3s, box-shadow 0.3s;
+          cursor: pointer;
+
+        }
+        .card:hover
+        {
+          transform: translateY(-10px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .card i
+        {
+          font-size: 40px;
+          color: #ff5733; 
+        }
+        .text-orange
+        {
+          color: #ff6a00;
+        }
+
+      .cardimg img
+      {
+        height: 100px;
+        width: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100px;
+        text-align: center;
+        
+      }
+
+      
+        /* Testimonials */
+        .testimonial-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid orange;
+        }
+
+        .btn-warning
+        {
+          background-color: #e66d00;
+        border-color: #e66d00;
+        color: #fff;
+        }
+        .btn-warning:active
+        {
+           background-color: #d36301;
+        border-color: #e66d00;
+        color: #fff;
+
+        }
+        /* responsive adjustments */
+        @media (max-width: 425px) {
+          li a
+          {
+            text-align: center;
+            margin-bottom: 4px;
+            
+          }
+        li>button
+          {
+            margin-bottom: 4px;
+            width: 50%;
+            
+          }
+
+          .card
+          {
+            font-size: smaller;
+            
+        }
+      }    
+    </style>
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+  <span style="color: #ff5733; font-weight: bold;">Design</span>Hub
+  <i class="bi bi-stars ms-2" style="color:#ff5733;"></i>
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <!--  All nav items right side -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#about-us">About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#CURRICULUM">Curriculum</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#tools">Tools</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#pricing">Pricing</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#reviews">Reviews</a>
+        </li>
+        <li class="nav-item text-center">
+          <button class="btn btn-success px-4 border rounded-5" data-bs-toggle="modal" data-bs-target="#enrollModal" type="button">ENROLL</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--------------------------------------------------hero section----------------------------------------------------------- -->
+
+<section id="home" class="herosection d-flex align-items-center" style="min-height: 100vh; padding-top: 80px;">
+  <div class="container">
+    <div class="row align-items-center flex-column-reverse flex-md-row">
+
+      <!-- Text Content -->
+      <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+        <h1 class="fw-medium mb-3">
+          Welcome To <span style="color: #ff5733; font-weight: bold;">Design</span>Hub
+        </h1>
+        <p class="mb-4 ">
+          Learn Photoshop, Illustrator, Figma, and Canva. Build a professional portfolio and launch your creative career
+        </p>
+
+        <div class="d-flex justify-content-center justify-content-md-start">
+          <button class="btn btn-orange px-4 py-2 me-3">
+            Get Started
+          </button>
+          <button class="btn btn-primary text-light px-4 py-2">
+            Download Syllabus <i class="bi bi-download"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Image -->
+      <div class="col-md-6 text-center">
+        <img src="heropage.png" alt="hero"class="img-fluid rounded">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--------------------------------------------------------- About Us Section ----------------------------------------->
+
+<section id="about-us" class="py-5 mb-5 bg-dark ">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Text Content -->
+      <div class="col-12">
+        <h1 class="fw-medium mb-4 mt-5 text-center text-white">
+          Why Choose Our Course?
+        </h1>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4 m-3">
+          
+          <div class="col">
+            <div class="card ">
+              <i class="bi bi-laptop"></i>
+              <div class="card-body">
+                <h5 class="card-title">100% Practical Learning</h5>
+                <p class="card-text lead">
+                  Learn by doing, not just watching. Every module is designed with real-time tasks, hands-on projects,and industry-style assignments so you gain actual working experience from day one.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card ">
+              <div class="card-body">
+                <i class="bi bi-person-workspace"></i>
+                <h5 class="card-title p-3">Experienced & Industry-Focused Faculty</h5>
+                <p class="card-text lead">
+                  Our trainers are working professionals with real industry exposure. They mentor you with practical insights, design workflows, and real client expectations, not just theory.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card ">
+              <div class="card-body">
+                <i class="bi bi-duffle-fill"></i>
+                <h5 class="card-title p-3">Real-World Projects & Portfolio Building</h5>
+                <p class="card-text lead">
+                  Work on live projects, case studies, and practical assignments. By the end of the course, you’ll have a strong professional portfolio ready for internships, freelancing, or jobs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <i class="bi bi-hourglass-split"></i>
+                <h5 class="card-title p-3">Advanced Design Labs & Extra Practice Hours</h5>
+                <p class="card-text lead">
+                  Access fully equipped design labs with the latest tools and software. Get extra lab hours, guided practice sessions, and personal support to sharpen your skills beyond class time.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!----------------------------------------------------------TOOLS------------------------------------------------------>
+
+<section id="tools" class="pb-3">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Text Content -->
+      <div class="col-12">
+        <h1 class="fw-medium mb-4 mt-5 text-center">
+          Tools You Will Master
+        </h1>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+          <div class="col">
+            <div class="cardimg">
+              <img src="adobe-photoshop-logo-icon-free-vector.jpg" alt="Photoshop" class="img-fluid mb-3" >
+              <h5 class="card-title text-center">Adobe Photoshop</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cardimg">
+              <img src="adobe-indesign-icon-free-png.png" alt="Indesign" class="img-fluid mb-3" >
+              <h5 class="card-title text-center">Adobe InDesign</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cardimg">
+              <img src="illustrator.webp" alt="Illustrator" class="img-fluid mb-3" >
+              <h5 class="card-title text-center">Illustrator</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cardimg">
+              <img src="FIGMA.jpg" alt="Figma" class="img-fluid mb-3" >
+              <h5 class="card-title text-center">Figma</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cardimg">
+              <img src="CANAVA.png" alt="Canva" class="img-fluid mb-3" >
+              <h5 class="card-title text-center">Canva</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cardimg">
+              <img src="Inkscape_Logo.svg.png" alt="Inkscape" class="img-fluid mb-3" >
+              <h5 class="card-title text-center">Inkscape</h5>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!------------------------------------------------CURRICULUM Section ----------------------------------------------->
+
+ <section id="CURRICULUM" class="my-5 pb-5 bg-dark text-white">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Text Content -->
+      <div class="col-12">
+        <h1 class="fw-medium mb-4 mt-5 text-center">
+          Course Curriculum
+        </h1>
+      </div>
+      <!-- CURRICULUM hoverbar -->
+<div class="accordion" id="accordionPanelsStayOpenExample">
+
+  <!-- Module 1 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+        aria-controls="panelsStayOpen-collapseOne">
+        <strong class="text-orange">Module 1: Fundamentals of Graphic Designing</strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+      aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        This module explains the basics of graphic design, including design principles, design elements, typography, color theory, color combinations, layouts, and branding fundamentals.
+      </div>
+    </div>
+  </div>
+
+  <!-- Module 2 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+        aria-controls="panelsStayOpen-collapseTwo">
+        <strong class="text-orange">Module 2: Adobe Photoshop</strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+      aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+        This module teaches image editing and design using Adobe Photoshop, including photo retouching, color correction, layers, selections, and creating posters, banners, and social media designs.
+      </div>
+    </div>
+  </div>
+
+  <!-- Module 3 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+        aria-controls="panelsStayOpen-collapseThree">
+        <strong class="text-orange">Module 3: Adobe InDesign</strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+      aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+        This module focuses on creating professional layouts using Adobe InDesign, including brochures, magazines, flyers, typography handling, page layouts, and print-ready documents.
+      </div>
+    </div>
+  </div>
+
+  <!-- Module 4 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+        aria-controls="panelsStayOpen-collapseFour">
+        <strong class="text-orange">Module 4: Adobe Illustrator</strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+      aria-labelledby="panelsStayOpen-headingFour">
+      <div class="accordion-body">
+        This module covers vector graphic design using Adobe Illustrator, including logo design, icon creation, illustrations, pen tool usage, color management, and exporting vector files.
+      </div>
+    </div>
+  </div>
+
+  <!-- Module 5 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+        aria-controls="panelsStayOpen-collapseFive">
+        <strong class="text-orange">Module 5: Figma</strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+      aria-labelledby="panelsStayOpen-headingFive">
+      <div class="accordion-body">
+        This module introduces UI and UX design using Figma, including wireframing, interface design, prototyping, responsive layouts, and team collaboration.
+      </div>
+    </div>
+  </div>
+
+  <!-- Module 6 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+        aria-controls="panelsStayOpen-collapseSix">
+        <strong class="text-orange">Module 6: Canva</strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+      aria-labelledby="panelsStayOpen-headingSix">
+      <div class="accordion-body">
+        This module teaches quick and easy design creation using Canva, including social media posts, presentations, posters, brand kits, and marketing creatives.
+      </div>
+    </div>
+  </div>
+
+  <!-- Module 7 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false"
+        aria-controls="panelsStayOpen-collapseSeven">
+        <strong class="text-orange">Module 7: Inkscape</strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse"
+      aria-labelledby="panelsStayOpen-headingSeven">
+      <div class="accordion-body">
+        This module focuses on vector graphic design using Inkscape, including drawing tools, path operations, logo creation, typography, and exporting SVG and print files.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-----------------------------certifiacte--------------------------------------------------------------->
+    <section id="certification" class="pb-5">
+        <div class="container">
+            <!-- Heading -->
+    <div class=" mb-5">
+      <h3 class="display-5 fw-semibold mb-4 text-center" style="color: #ff5733;">Certificate of Completion</h3>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="Certificate of Completion.png" alt="Certificate" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h3>Get Certified <i class="bi bi-patch-check-fill"></i></h3>
+                    <p class="lead">Upon successful completion of the course and project submissions, you will receive a recognized certificate of completion.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Industry Recognized</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Shareable on LinkedIn</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Validated ID for employers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!---------------------------------------price---------------------------------------------------------------------->
+<section id="pricing" class="py-5 bg-dark text-white">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h1 class="display-5 fw-semibold mb-3" style="color:#ff5733;">Pricing</h1>
+      <p class="lead mb-0">
+        Choose a plan that fits your needs. No hidden fees, cancel anytime.
+      </p>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="row g-4 justify-content-center">
+
+      <!-- ADOBE -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded h-100">
+          <h6 class="text-uppercase mt-3">Adobe Professional Course</h6>
+          <h2 class="display-6 fw-bold border-bottom pb-3 mb-3">₹1999</h2>
+
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Certificate of Completion</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Complete Adobe workflow</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>1 Year Free Subscription</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Print & digital projects</li>
+          </ul>
+        </div>
+      </div>
+      <!-- COMPLETE GRAPHIC DESIGN -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border border-primary rounded position-relative h-100">
+          <span class="badge bg-primary position-absolute top-0 end-0 rounded-bottom-start px-3 py-2">
+            POPULAR
+          </span>
+
+          <h6 class="text-uppercase mt-3">Complete Graphic Design</h6>
+          <h2 class="display-6 fw-bold border-bottom pb-3 mb-3">₹2999</h2>
+
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>All modules covered</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Certificate of Completion</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>3 Year Free Subscription</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Lifetime course access</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FIGMA & CANVA -->
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded h-100">
+          <h6 class="text-uppercase mt-3">UI Design Tools Course</h6>
+          <h2 class="display-6 fw-bold border-bottom pb-3 mb-3">₹999</h2>
+
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Beginner-friendly</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Web & mobile projects</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>UI / UX focused</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Certificate of Completion</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+    <!-- ================= Reviews/Testimonials ================= -->
+    <section id="reviews" class="bg-white p-5 bg-dark">
+        <div class="container">
+            <h2 class="section-title text-center mb-3 text-orange">What Our Students Say</h2>
+            
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Item 1 -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="testimonial-card" style="border:#000000;">
+                                    <img src="p1.jpg" alt="Student" class="avatar">
+                                    
+                                    <h5 class="fw-bold">Gajulapalli Venkata Raviteja</h5>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i><br>
+                                    <small class="text-muted">Freelance Designer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="testimonial-card">
+                                    <img src="p3.jpg" alt="Student" class="avatar">
+                                    
+                                    <h5 class="fw-bold">Priyanshu Sharma</h5>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i><br>
+                                    <small class="text-muted">Junior UI Designer</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Contact / Enroll ================= -->
+    <section id="contact" class="bg-dark text-white p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h3 class="text-orange">Contact Us</h3>
+                    <p>Have questions? Reach out to our admission team.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-3">
+                         <i class="fas fa-map-marker-alt me-3 text-orange"></i>20-694/1 Design Street, Rajahmundry</li>
+                        <li class="mb-3"><i class="fas fa-phone me-3 text-orange"></i>+91 7386475223 </li>
+                        <li class="mb-3"><i class="fas fa-envelope me-3 text-orange"></i>teja75003@gmail.com</li>
+                        
+
+                        
+                    </ul>
+                </div>
+            
+                <div class="col-md-6">
+                    <div class="card bg-secondary text-white border-0 p-4">
+                        <h4 class="mb-3" style="color: #f0f0f0;">Quick Inquiry</h4>
+                        <form onsubmit="showMessage(event)">
+                          <div class="mb-3">
+                           <input type="text" class="form-control" placeholder="Enter Your Name" required>
+                          </div>
+                          <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Enter Your Email" required>
+                          </div>
+                          <div class="mb-3">
+                           <textarea class="form-control" rows="3" placeholder="Send Your Message" required></textarea>
+                          </div>
+
+                             <!-- Alert Message -->
+                         <div id="successMsg" class="alert alert-success d-none">
+                            ✅ Message sent successfully!
+                          </div>
+
+                          <button type="submit" class="btn btn-orange px-5 ">Send</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Footer ================= -->
+    <footer class="bg-dark p-4 fixed">
+        <div class="container text-center">
+          
+
+            <p class="text-white">&copy; 2025 DesignHub. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ================= Enrollment Modal ================= -->
+    <div class="modal fade" id="enrollModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Enroll Now</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted text-center mb-3">Fill out the form below to secure your spot in the upcoming batch.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Your Full Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" placeholder="Enter Your Email Address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="Enter Your Phone Number" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Select Batch</label>
+                            <select class="form-select">
+                                <option>Weekdays (Mon-Fri)</option>
+                                <option>Weekends (Sat-Sun)</option>
+                            </select>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+function showMessage(event) {
+    event.preventDefault(); // stop page reload
+    document.getElementById("successMsg").classList.remove("d-none");
+}
+</script>
+
+</body>
+</html>
